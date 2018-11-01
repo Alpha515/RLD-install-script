@@ -42,16 +42,12 @@ sudo add-apt-repository ppa:bitcoin/bitcoin -y
 sudo apt-get update
 sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
 
-#sudo git clone https://github.com/ReloadCoin/ReloadCore.git
-cd ReloadCore
-#sudo ./autogen.sh
-#sudo ./configure
-#sudo make -j$(nproc)
+sudo git clone https://github.com/Indy-Mining/RLD-install-script.git
+cd RLD-install-script
 
-cd
 sleep 2
-echo -e "${GREEN}Installing Firewall${NC}"
-sleep 5
+#echo -e "${GREEN}Installing Firewall${NC}"
+#sleep 5
 #sudo apt-get install -y ufw
 #sudo ufw allow ssh/tcp
 #sudo ufw limit ssh/tcp
@@ -62,10 +58,8 @@ sleep 5
 echo ""
 echo ""
 echo -e "${GREEN}Moving stuff where it ${RED}NEEDS${NC} to be"
-#sudo chmod +x ~/ReloadCore/src/reloadd ~/ReloadCore/src/reload-cli
-sudo chmod +x ~/ReloadCore/reloadd ~/ReloadCore/reload-cli
-#sudo mv ~/ReloadCore/src/reloadd ~/ReloadCore/src/reload-cli /usr/local/bin
-sudo mv ~/ReloadCore/reloadd ~/ReloadCore/reload-cli /usr/local/bin
+sudo chmod +x ~/RLD-install-script/reloadd ~/RLD-install-script/reload-cli
+sudo mv ~/RLD-install-script/reloadd ~/RLD-install-script/reload-cli /usr/local/bin
 mkdir ~/.reload
 cd ~/.reload
 sudo reloadd -daemon
