@@ -43,7 +43,7 @@ sudo apt-get update
 sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
 
 #sudo git clone https://github.com/ReloadCoin/ReloadCore.git
-cd ReloadCoin
+cd ReloadCore
 #sudo ./autogen.sh
 #sudo ./configure
 #sudo make -j$(nproc)
